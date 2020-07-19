@@ -24,9 +24,10 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,css}": [
-      "prettier --write",
-      "npm test"
+    "src/*.{js,jsx,ts,tsx,css}": [
+      "npm run format",
+      "npm run lint",
+      "npm run test"
     ]
   },
   "engines": {
