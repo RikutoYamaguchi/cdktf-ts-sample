@@ -22,10 +22,22 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "stripInternal": true,
-    "target": "ES2018"
+    "target": "ES2018",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@gen/*": [".gen/*"]
+    },
+    "outDir": "./dist",
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ]
   },
   "include": [
-    "**/*.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
     "node_modules"
