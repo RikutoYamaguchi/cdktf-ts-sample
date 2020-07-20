@@ -7,10 +7,10 @@
   "private": true,
   "scripts": {
     "get": "cdktf get",
-    "build": "yarn get && tsc",
+    "build": "npm get && npm run compile",
     "synth": "cdktf synth",
     "compile": "ttsc --pretty",
-    "watch": "tsc -w",
+    "watch": "ttsc -w",
     "upgrade": "npm i cdktf@latest cdktf-cli@latest",
     "upgrade:next": "npm i cdktf@next cdktf-cli@next",
     "lint": "eslint",
