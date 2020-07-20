@@ -115,7 +115,7 @@ npm run synth
 
 ## Aliases
 
-- `@gn` for `./gen`
+- `@gen` for `./.gen`
 - `@src` for `./src`
 
 ### For IDE
