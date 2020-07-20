@@ -13,22 +13,22 @@
     "watch": "tsc -w",
     "upgrade": "npm i cdktf@latest cdktf-cli@latest",
     "upgrade:next": "npm i cdktf@next cdktf-cli@next",
-    "lint": "eslint ./src/*",
+    "lint": "eslint",
+    "lint-all": "eslint ./src/*",
     "test": "jest --config jestconfig.json",
-    "format": "prettier --write \"src/**/*.ts\"",
-    "precommit": "npm test"
+    "format": "prettier --write",
+    "format-all": "prettier --write \"src/**/*.ts\""
+  },
+  "lint-staged": {
+    "src/**/*.ts": [
+      "npm run format",
+      "npm run lint"
+    ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "src/*.{js,jsx,ts,tsx,css}": [
-      "npm run format",
-      "npm run lint",
-      "npm run test"
-    ]
   },
   "engines": {
     "node": ">=10.12"
